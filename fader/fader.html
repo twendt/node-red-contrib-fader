@@ -1,0 +1,46 @@
+<script type="text/javascript">
+    RED.nodes.registerType('fader',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            statusTopic: {value:""},
+            fadeMinutes: {value:""},
+            intervalSeconds: {value:""},
+            maxValue: {value:""},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"fader";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="fader">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i>Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-statusTopic"><i class="icon-tag"></i>Status Topic</label>
+        <input type="text" id="node-input-statusTopic" placeholder="Status Tpoic">
+    </div>
+    <div class="form-row">
+        <label for="node-input-fadeMinutes"><i class="icon-tag"></i>Fade Duration (Minutes)</label>
+        <input type="text" id="node-input-fadeMinutes" placeholder="Fade Duration in Minutes">
+    </div>
+    <div class="form-row">
+        <label for="node-input-intervalSeconds"><i class="icon-tag"></i>Step Interval (Seconds)</label>
+        <input type="text" id="node-input-intervalSeconds" placeholder="Seconds between steps">
+    </div>
+    <div class="form-row">
+        <label for="node-input-maxValue"><i class="icon-tag"></i>Maximum Value</label>
+        <input type="text" id="node-input-maxValue" placeholder="Maximum value">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="tfa">
+    <p>This node can be used to create a wakeup light</p>
+</script>
