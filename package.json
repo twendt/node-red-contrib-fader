@@ -7,7 +7,7 @@
     "keywords": [ "node-red" ],
     "node-red"     : {
         "nodes": {
-            "sample": "fader/fader.js"
+            "fader": "fader/fader.js"
         }
     }
 }
